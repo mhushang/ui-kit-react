@@ -19,7 +19,8 @@ export default defineConfig({
       entry: './src/index.ts',
       name: 'UiKitReact',
       fileName: 'index'
-    }
+    },
+    cssCodeSplit: true,
   }
   // build: {
   //   lib: {
