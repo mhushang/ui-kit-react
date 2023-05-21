@@ -1,3 +1,5 @@
+import './style.css';
+
 var Vr = { exports: {} }, Je = {}, gr = { exports: {} }, b = {};
 /**
  * @license React

@@ -1,13 +1,15 @@
 {
   "name": "@hush-mirzo/ui-kit-react",
   "private": false,
-  "version": "0.0.14",
+  "version": "0.0.16",
   "type": "module",
   "files": [
     "dist",
     "index.d.ts",
     "style.css",
-    "dist/style.css"
+    "dist/style.css",
+    "./dist/style.css",
+    "/dist/style.css"
   ],
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
