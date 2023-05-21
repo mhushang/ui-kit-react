@@ -1,1 +1,0 @@
-export { InputTag } from './InputTag';
