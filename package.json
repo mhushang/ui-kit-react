@@ -1,10 +1,11 @@
 {
   "name": "@hush-mirzo/ui-kit-react",
   "private": false,
-  "version": "0.0.6",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "version": "0.0.8",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -12,6 +13,9 @@
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
@@ -70,6 +74,8 @@
     "clsx": "^1.2.1",
     "react-popper": "^2.3.0",
     "sass": "^1.57.1",
-    "text-security": "^3.2.1"
+    "text-security": "^3.2.1",
+    "vite-plugin-dts": "^2.3.0",
+    "vite-tsconfig-paths": "^4.2.0"
   }
 }
