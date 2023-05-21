@@ -1,16 +1,10 @@
 {
   "name": "@hush-mirzo/ui-kit-react",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
-    }
-  },
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
