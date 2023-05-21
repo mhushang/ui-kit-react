@@ -21,6 +21,15 @@ export default defineConfig({
       name: 'UiKitReact',
       fileName: 'index'
     },
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+      output: {
+          globals: {
+              react: 'React',
+              'react-dom': 'ReactDOM',
+          },
+      },
+    },
     cssCodeSplit: true,
   }
 });

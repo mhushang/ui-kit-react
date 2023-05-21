@@ -1,7 +1,7 @@
 {
   "name": "@hush-mirzo/ui-kit-react",
   "private": false,
-  "version": "0.0.20",
+  "version": "0.0.21",
   "type": "module",
   "files": [
     "dist",

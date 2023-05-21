@@ -1,8 +1,8 @@
-import React, { ChangeEvent } from 'react';
-import clsx from 'clsx';
+import React, { ChangeEvent } from "react";
+import clsx from "clsx";
 
-import './ToggleStyles.scss';
-import { IToggleProps } from './ToggleTypes';
+import "./ToggleStyles.scss";
+import { IToggleProps } from "./ToggleTypes";
 
 export const Toggle: React.FC<IToggleProps> = ({
   ariaLabel,
@@ -22,17 +22,17 @@ export const Toggle: React.FC<IToggleProps> = ({
     <div className="Toggle-wrapper">
       <label
         className={clsx({
-          ['Toggle']: true,
-          ['Toggle-default']: true,
-          ['Toggle-disabled']: disabled,
-          ['Toggle-error']: error,
+          ["Toggle"]: true,
+          ["Toggle-default"]: true,
+          ["Toggle-disabled"]: disabled,
+          ["Toggle-error"]: error,
         })}
       >
         <input
           id="toggle"
           type="checkbox"
           className="Toggle-focus"
-          aria-label={ariaLabel || ''}
+          aria-label={ariaLabel || ""}
           onClick={handleClick}
           onChange={onChange}
           checked={value}
@@ -41,19 +41,19 @@ export const Toggle: React.FC<IToggleProps> = ({
         />
         <span
           className={clsx({
-            ['Toggle-slider']: true,
-            ['Toggle-slider-default']: true,
-            ['Toggle-slider-disabled']: disabled,
-            ['Toggle-slider-error']: error,
+            ["Toggle-slider"]: true,
+            ["Toggle-slider-default"]: true,
+            ["Toggle-slider-disabled"]: disabled,
+            ["Toggle-slider-error"]: error,
           })}
         ></span>
       </label>
       <label
         htmlFor="toggle"
         className={clsx({
-          ['Toggle-label']: true,
-          ['Toggle-label-error']: error,
-          ['Toggle-label-disabled']: disabled,
+          ["Toggle-label"]: true,
+          ["Toggle-label-error"]: error,
+          ["Toggle-label-disabled"]: disabled,
         })}
       >
         {label}
