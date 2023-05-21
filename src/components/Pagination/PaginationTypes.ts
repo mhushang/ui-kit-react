@@ -1,5 +1,8 @@
-import { PAGINATION_DEFAULT_LOCALIZATION, PAGINATION_LIMITS } from './PaginationConstants';
-import { PLACEMENT_TYPE } from '../Popover';
+import {
+  PAGINATION_DEFAULT_LOCALIZATION,
+  PAGINATION_LIMITS,
+} from "./PaginationConstants";
+import { PLACEMENT_TYPE } from "../Popover";
 
 export interface IPaginationProps {
   totalItems: number;

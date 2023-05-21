@@ -1,5 +1,5 @@
-import { PaginationLocalizationType } from '../../PaginationTypes';
-import { PLACEMENT_TYPE } from '../../../Popover';
+import { PaginationLocalizationType } from "../../PaginationTypes";
+import { PLACEMENT_TYPE } from "../../../Popover";
 
 export interface IRangeLimitsProps {
   currentPage: number;

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { COLUMN_ALIGN_TYPE, SORTER_TYPE, TABLE_TYPE } from './TableConstants';
+import { COLUMN_ALIGN_TYPE, SORTER_TYPE, TABLE_TYPE } from "./TableConstants";
 
 export interface IColumn extends Record<string, any> {
   key?: string;
@@ -19,7 +19,10 @@ export interface IColumnType<T extends IColumn> {
   width: number;
   render?: (item: T, column: IColumnType<T>) => React.ReactNode;
   onSort?: (key: string, order: OrderType) => void;
-  align?: COLUMN_ALIGN_TYPE.start | COLUMN_ALIGN_TYPE.center | COLUMN_ALIGN_TYPE.end;
+  align?:
+    | COLUMN_ALIGN_TYPE.start
+    | COLUMN_ALIGN_TYPE.center
+    | COLUMN_ALIGN_TYPE.end;
 }
 
 export interface ITableProps<T extends IColumn> {
