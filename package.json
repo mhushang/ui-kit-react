@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc && vite build --base=./",
+    "build": "tsc && vite build",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
     "lint:scripts": "eslint . --ext .ts",
