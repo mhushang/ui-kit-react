@@ -1,2 +1,2 @@
 export * from "./components";
-import "./styles/index.scss";
+import "../dist/style.css";
