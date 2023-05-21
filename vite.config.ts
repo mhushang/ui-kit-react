@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dts from 'vite-plugin-dts';
 import tsConfigPaths from 'vite-tsconfig-paths';
-
+import libCss from 'vite-plugin-libcss';
 
 export default defineConfig({
   plugins: [
@@ -12,7 +12,8 @@ export default defineConfig({
       insertTypesEntry: true,
     }),
     react(),
-    tsConfigPaths()
+    tsConfigPaths(),
+    libCss()
   ],
   build: {
     lib: {

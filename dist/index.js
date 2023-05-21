@@ -1,3 +1,4 @@
+import './index.css';
 var Vr = { exports: {} }, Je = {}, gr = { exports: {} }, b = {};
 /**
  * @license React

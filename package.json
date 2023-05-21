@@ -72,6 +72,7 @@
     "tslib": "^2.5.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.4",
+    "vite-plugin-libcss": "^1.0.6",
     "vitest": "^0.29.8"
   },
   "dependencies": {
