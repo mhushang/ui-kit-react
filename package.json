@@ -1,6 +1,6 @@
 {
-  "name": "ui-kit-react",
-  "private": true,
+  "name": "@hush-mirzo/ui-kit-react",
+  "private": false,
   "version": "0.0.2",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
