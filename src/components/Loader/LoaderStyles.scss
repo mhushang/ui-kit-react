@@ -1,0 +1,84 @@
+@import '../../styles/index.scss';
+
+.Loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Loader-dot-left,
+.Loader-dot-center,
+.Loader-dot-right {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.Loader-dot-left {
+  margin-right: 8px;
+  animation: Loader-dot-left 1.5s infinite linear;
+  animation-delay: 0s;
+}
+
+.Loader-dot-center {
+  animation: Loader-dot-center 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+
+.Loader-dot-right {
+  margin-left: 8px;
+  animation: Loader-dot-rigth 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+.Loader-orange {
+  .Loader-dot-left,
+  .Loader-dot-center,
+  .Loader-dot-right {
+    background-color: $brightOrange;
+  }
+}
+
+.Loader-white {
+  .Loader-dot-left,
+  .Loader-dot-center,
+  .Loader-dot-right {
+    background-color: $white;
+  }
+}
+
+@keyframes Loader-dot-left {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes Loader-dot-center {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes Loader-dot-rigth {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}

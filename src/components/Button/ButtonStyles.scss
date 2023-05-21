@@ -1,0 +1,177 @@
+@import '../../styles/index.scss';
+
+.Button {
+  @extend .flex-center-align-center;
+  min-width: 64px;
+  min-height: 30px;
+  padding: 5px 15px;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: 0.2s;
+  border: 1px solid;
+  position: relative;
+  gap: 9px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    @extend .focus-visible;
+  }
+
+  .center-icon {
+    @extend .flex-center-align-center;
+  }
+
+  .left-icon {
+    @extend .flex-space-between-align-center;
+  }
+
+  .right-icon {
+    @extend .flex-space-between-align-center;
+  }
+}
+
+@mixin button($bgColor, $textColor, $hoverColor, $activeColor, $disabledColor) {
+  background-color: $bgColor;
+  border-color: $bgColor;
+  color: $textColor;
+
+  svg {
+    color: $textColor;
+  }
+
+  &:hover {
+    background-color: $hoverColor;
+    border-color: $hoverColor;
+  }
+
+  &:active {
+    background-color: $activeColor;
+    border-color: $activeColor;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: $disabledColor;
+    border-color: $disabledColor;
+  }
+}
+
+.Button-default {
+  @include button($white, $darkGray, $lighterGray, $lightGray, $lighterGray);
+
+  border-color: $lightGray;
+
+  &:hover {
+    border-color: $lightGray;
+  }
+
+  &:disabled {
+    color: $lightGray;
+    border-color: $lightGray;
+
+    svg {
+      color: $lightGray;
+    }
+  }
+}
+
+.Button-primary-orange {
+  @include button($brightOrange, $white, $orange, $darkOrange, $lightGray);
+}
+
+.Button-primary-grey {
+  @include button($middleGray, $white, $preDarkGray, $darkGray, $lightGray);
+}
+
+.Button-primary-green {
+  @include button($green, $white, $preDarkGreen, $darkGreen, $lightGray);
+}
+
+.Button-primary-red {
+  @include button($lightRed, $white, $red, $darkRed, $lightGray);
+}
+
+.Button-no-border {
+  @include button(transparent, $darkGray, $lighterGray, $lightGray, transparent);
+
+  &:disabled {
+    color: $lightGray;
+
+    svg {
+      color: $lightGray;
+    }
+  }
+}
+
+.Button-error {
+  @include button($white, $red, $dullRed, $darkRed, $white);
+
+  border-color: $red;
+
+  &:hover {
+    border-color: $red;
+  }
+
+  &:active {
+    background-color: $white;
+  }
+
+  &:disabled {
+    color: $brightRed;
+    border-color: $brightRed;
+
+    svg {
+      color: $brightRed;
+    }
+  }
+}
+
+.Button-link {
+  @include button(transparent, $darkGray, transparent, transparent, transparent);
+
+  padding: 0;
+
+  &:hover {
+    color: $brightOrange;
+
+    svg {
+      color: $brightOrange;
+    }
+  }
+
+  &:active {
+    color: $darkOrange;
+  }
+
+  &:disabled {
+    color: $lightGray;
+
+    svg {
+      color: $lightGray;
+    }
+  }
+}
+
+.Buton-link-hover-underline {
+  @extend .Button-link;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+
+  &:disabled {
+    text-decoration: none;
+  }
+}
+
+.Button-underline {
+  @extend .Button-link;
+
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  padding: 0;
+}

@@ -1,0 +1,46 @@
+@import '../../styles/index.scss';
+
+.DropDown {
+  .Popover-reference {
+    width: 100%;
+  }
+  .Popover-content {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .DropDown-loader {
+    @extend .flex-center-align-center;
+    min-height: 200px;
+  }
+
+  .DropDown-clear {
+    padding: 12px 12px;
+    color: $middleGray;
+    border: 0;
+    svg {
+      color: $middleGray;
+    }
+  }
+
+  .DropDown-no-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    color: $middleGray;
+  }
+
+  .DropDown-option-wrapper {
+    max-height: 550px;
+    overflow-y: auto;
+    &-search {
+      padding: 12px 12px 6px;
+
+      .Input-wrapper {
+        min-width: auto;
+        width: 100%;
+      }
+    }
+  }
+}

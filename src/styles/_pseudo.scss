@@ -1,0 +1,9 @@
+@import './colors';
+
+.focus-visible {
+  outline-color: $skyBlue;
+  outline-style: dashed;
+  outline-width: 4px;
+  outline-offset: 2px;
+  transition: none;
+}

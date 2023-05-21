@@ -1,0 +1,38 @@
+@import '../../../../styles/index.scss';
+
+.RangeLimits {
+  display: flex;
+  align-items: center;
+  color: $middleGray;
+  font-size: 12px;
+
+  .RangeLimits-limiter-button {
+    font-weight: 400;
+    padding: 3px 7px;
+    min-width: initial;
+    .right-icon {
+      margin-left: 3px;
+    }
+  }
+
+  .RangeLimits-range-drop-down {
+    .Popover-content {
+      padding: 0;
+
+      .Button {
+        font-size: 14px;
+        font-weight: 400;
+        justify-content: start;
+      }
+    }
+  }
+
+  .RangeLimits-range-label {
+    margin-left: 5px;
+
+    @at-root #{$rtlLanguagesSelector} & {
+      margin-right: 5px;
+      margin-left: 0;
+    }
+  }
+}

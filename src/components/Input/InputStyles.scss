@@ -1,0 +1,241 @@
+@import '../../styles/index.scss';
+
+.Input-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 165px;
+
+  .Input-top-elements {
+    @extend .flex-space-between-align-center;
+    position: relative;
+
+    // LABELS
+    .Input-big-label {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 8px;
+      padding-left: 2px;
+    }
+
+    .Input-big-label-default {
+      color: $darkGray;
+    }
+
+    .Input-big-label-error {
+      color: $red;
+    }
+
+    .Input-big-label-disabled {
+      color: $lightGray;
+    }
+
+    .Input-small-label {
+      font-size: 12px;
+      padding-left: 2px;
+      margin-bottom: 4px;
+    }
+
+    .Input-small-label-default {
+      color: $darkGray;
+    }
+
+    .Input-small-label-error {
+      color: $red;
+    }
+
+    .Input-small-label-disabled {
+      color: $lightGray;
+    }
+
+    // COUNTER
+    .Input-counter {
+      color: $middleGray;
+      font-size: 10px;
+      padding-right: 2px;
+      position: absolute;
+      top: -12px;
+      right: 2px;
+    }
+
+    .Input-counter-disabled {
+      color: $lightGray;
+    }
+  }
+
+  .Input {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    min-width: 165px;
+    height: 30px;
+    border: 1px solid $lightGray;
+    transition: 0.2s;
+    border-radius: 5px;
+    padding: 0 8px;
+
+    &:focus-within {
+      border-color: $middleGray;
+    }
+
+    &:hover {
+      background-color: $lighterGray;
+
+      .Input-textfield {
+        background-color: $lighterGray;
+      }
+    }
+
+    // ICON
+    .Input-icon {
+      color: $middleGray;
+      width: 16px;
+      height: 16px;
+    }
+
+    .Input-icon-disabled {
+      color: $lightGray;
+    }
+
+    .Input-security {
+      font-family: text-security-disc;
+      -webkit-text-security: disc;
+    }
+
+    // TEXTFIELD
+    .Input-textfield {
+      box-sizing: border-box;
+      min-width: 165px;
+      border: none;
+      padding: 0;
+      color: $darkGray;
+      font-size: 14px;
+      transition: 0.2s;
+      outline: none;
+      border-radius: 5px;
+      padding-left: 8px;
+      padding-right: 8px;
+
+      &:hover {
+        background-color: $lighterGray;
+      }
+
+      &::placeholder {
+        color: $middleGray;
+      }
+    }
+
+    .Input-textfield-disabled {
+      color: $lightGray;
+
+      &::placeholder {
+        color: $lightGray;
+      }
+    }
+
+    // BUTTONS
+    .Input-button {
+      @extend .flex-center-align-center;
+      border: none;
+      background-color: transparent;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      transition: 0.2s;
+
+      &:hover {
+        cursor: pointer;
+
+        svg {
+          color: $darkGray;
+        }
+      }
+
+      &:focus {
+        outline: none;
+
+        svg {
+          color: $darkGray;
+        }
+      }
+
+      &:active {
+        svg {
+          color: $orange;
+        }
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        color: $middleGray;
+        padding-left: 0;
+      }
+
+      &.Input-button-password {
+        svg {
+          width: 12px;
+          height: 10px;
+        }
+
+        &:focus-visible {
+          @extend .focus-visible;
+        }
+      }
+    }
+
+    .Input-button-disabled {
+      svg {
+        color: $lightGray;
+      }
+
+      &:hover {
+        cursor: default;
+
+        svg {
+          color: $lightGray;
+        }
+      }
+
+      &:focus {
+        svg {
+          color: $lightGray;
+        }
+      }
+
+      &:active {
+        svg {
+          color: $lightGray;
+        }
+      }
+    }
+
+    // DIVIDER
+    .Input-button-divider {
+      background-color: $lightGray;
+      width: 1px;
+      height: 20px;
+    }
+  }
+
+  .Input-disabled {
+    border-color: $lightGray;
+    background-color: $lighterGray;
+  }
+
+  .Input-error {
+    border-color: $red;
+  }
+
+  .Input-error-text {
+    color: $red;
+    margin-top: 4px;
+    font-size: 12px;
+    padding-left: 2px;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
