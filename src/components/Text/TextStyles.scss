@@ -1,0 +1,24 @@
+@import '../../styles/index.scss';
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@700&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+.Text {
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 400;
+}
+
+.Text-display {
+  font-family: 'Commissioner', 'sans-serif';
+  font-weight: 700;
+}
+
+.Text-bold {
+  font-weight: 700;
+}
+
+.Text-underline {
+  text-decoration: underline;
+}
+
+.Text-uppercase {
+  text-transform: uppercase;
+}

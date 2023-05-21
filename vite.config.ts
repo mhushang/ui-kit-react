@@ -23,15 +23,4 @@ export default defineConfig({
     },
     cssCodeSplit: true,
   }
-  // build: {
-  //   lib: {
-  //     entry: path.resolve(__dirname, "src/index.ts"),
-  //     name: "UiKitReact",
-  //     formats: ['es', 'umd'],
-  //     fileName: (format) => `index.${format}.js`,
-  //   },
-  //   rollupOptions: {
-  //     external: ["react", "react-dom"]
-  //   },
-  // },
 });

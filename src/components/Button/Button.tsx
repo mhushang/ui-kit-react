@@ -1,11 +1,11 @@
-import React from "react";
-import clsx from "clsx";
+import React from 'react';
+import clsx from 'clsx';
 
-import { Loader, LOADER_COLOR } from "../Loader";
+import { Loader, LOADER_COLOR } from '../Loader';
 
-import "./ButtonStyles.scss";
-import { IButtonProps } from "./ButtonTypes";
-import { BUTTON_TYPE } from "./ButtonConstants";
+import './ButtonStyles.scss';
+import { IButtonProps } from './ButtonTypes';
+import { BUTTON_TYPE } from './ButtonConstants';
 
 export const Button: React.FC<IButtonProps> = ({
   ariaLabel,
@@ -41,27 +41,27 @@ export const Button: React.FC<IButtonProps> = ({
 
   return (
     <button
-      aria-label={ariaLabel || "button"}
+      aria-label={ariaLabel || 'button'}
       onClick={handleClick}
       disabled={disabled || loading}
       className={clsx({
-        ["Button"]: true,
-        ["Button-default"]: !theme || theme === BUTTON_TYPE.default,
-        ["Button-no-border"]: theme === BUTTON_TYPE.noBorder,
-        ["Button-link"]: theme === BUTTON_TYPE.link,
-        ["Buton-link-hover-underline"]: theme === BUTTON_TYPE.hoverUnderline,
-        ["Button-underline"]: theme === BUTTON_TYPE.underline,
-        ["Button-primary-orange"]: theme === BUTTON_TYPE.primaryOrange,
-        ["Button-primary-grey"]: theme === BUTTON_TYPE.primaryGrey,
-        ["Button-primary-green"]: theme === BUTTON_TYPE.primaryGreen,
-        ["Button-primary-red"]: theme === BUTTON_TYPE.primaryRed,
-        ["Button-error"]: error,
-        [className || ""]: !!className,
+        ['Button']: true,
+        ['Button-default']: !theme || theme === BUTTON_TYPE.default,
+        ['Button-no-border']: theme === BUTTON_TYPE.noBorder,
+        ['Button-link']: theme === BUTTON_TYPE.link,
+        ['Buton-link-hover-underline']: theme === BUTTON_TYPE.hoverUnderline,
+        ['Button-underline']: theme === BUTTON_TYPE.underline,
+        ['Button-primary-orange']: theme === BUTTON_TYPE.primaryOrange,
+        ['Button-primary-grey']: theme === BUTTON_TYPE.primaryGrey,
+        ['Button-primary-green']: theme === BUTTON_TYPE.primaryGreen,
+        ['Button-primary-red']: theme === BUTTON_TYPE.primaryRed,
+        ['Button-error']: error,
+        [className || '']: !!className,
       })}
       id={id}
       name={name}
       tabIndex={tabIndex}
-      type={submit ? "submit" : "button"}
+      type={submit ? 'submit' : 'button'}
     >
       {!loading && leftIcon && <div className="left-icon">{leftIcon}</div>}
       {loading ? (

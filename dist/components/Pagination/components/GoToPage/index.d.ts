@@ -1,0 +1,1 @@
+export { GoToPage } from './GoToPage';

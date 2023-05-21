@@ -1,0 +1,23 @@
+@import '../../styles/index.scss';
+
+.DropDownStatus {
+  &-popover {
+    .Popover-content {
+      padding: 0;
+
+      .Button {
+        justify-content: start;
+        border-radius: 0;
+        font-size: 12px;
+        color: $darkGray;
+        font-weight: 400;
+        min-height: 45px;
+        width: 100%;
+      }
+    }
+  }
+
+  .Popover-reference {
+    padding: 0;
+  }
+}

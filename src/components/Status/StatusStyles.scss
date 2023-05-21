@@ -1,0 +1,126 @@
+@import '../../styles/index.scss';
+
+.Status {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  font-size: 12px;
+  padding: 0 12px;
+  justify-content: center;
+  border-radius: 100px;
+  font-weight: 700;
+  box-sizing: border-box;
+
+  @at-root #{$rtlLanguagesSelector} & {
+    direction: rtl;
+  }
+
+  @mixin color-status($backgroundColor: $white, $color: $darkGray) {
+    background: $backgroundColor;
+    color: $color;
+    border: 1px solid $backgroundColor;
+    &.Status-highlight-border {
+      border: 1px solid $color;
+    }
+
+    &.Status-clickable {
+      transition: background-color 0.1s;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        background: darken($backgroundColor, 7%);
+        border: 1px solid darken($color, 5%);
+      }
+    }
+  }
+
+  &-disabled {
+    @include color-status($lighterGray, $lightGray);
+    cursor: not-allowed;
+  }
+  &-color-none {
+    @include color-status(transparent, $middleGray);
+  }
+
+  &-color-gray {
+    @include color-status($lighterGray, $darkGray);
+  }
+
+  &-color-red {
+    @include color-status($dullRed, $red);
+  }
+
+  &-color-blue {
+    @include color-status($paleBlue, $skyBlue);
+  }
+
+  &-color-green {
+    @include color-status($dullGreen, $darkGreen);
+  }
+
+  &-color-orange {
+    @include color-status($paleOrange, $brightOrange);
+  }
+
+  &-color-violet {
+    @include color-status($lightViolet, $vividViolet);
+  }
+
+  &-width-drop-down {
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 0 8px 0 16px;
+
+    svg {
+      margin-left: 5px;
+    }
+
+    @at-root #{$rtlLanguagesSelector} & {
+      padding: 0 16px 0 8px;
+
+      svg {
+        margin-right: 5px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-clickable:focus-visible {
+    @extend .focus-visible;
+  }
+
+  &-with-icon {
+    padding: 0 8px;
+  }
+
+  &-left-icon,
+  &-right-icon {
+    display: flex;
+
+    width: 14px;
+    height: 14px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &-right-icon {
+    margin-left: 10px;
+
+    @at-root #{$rtlLanguagesSelector} & {
+      margin-right: 10px;
+      margin-left: 0;
+    }
+  }
+
+  &-left-icon {
+    margin-right: 4px;
+
+    @at-root #{$rtlLanguagesSelector} & {
+      margin-left: 4px;
+      margin-right: 0;
+    }
+  }
+}
